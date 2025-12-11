@@ -1,6 +1,6 @@
-import axios from "axios";
 import { useState } from "react";
 import "./urlLogin.css";
+import axiosClient from "../../api/axiosClient";
 import { Link, useNavigate } from "react-router-dom";
 
 export default function UrlLogin() {
@@ -11,13 +11,13 @@ export default function UrlLogin() {
 
   const handleUrlLoginSubmit = (e) => {
     e.preventDefault();
-    axios
-      .post(`http://localhost:8080/user/login`, {
+    axiosClient
+      .post(`/user/login`, {
         email: loginEmail,
         password: loginPassword,
       })
       .then((res) => {
-        if (res.data.success == true) {
+        if (res.data.success === true) {
           setLoginModal(res.data.message);
           localStorage.setItem("token", res.data.token);
           localStorage.setItem("user", JSON.stringify(res.data.user));

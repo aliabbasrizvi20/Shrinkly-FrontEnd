@@ -1,4 +1,4 @@
-import axios from "axios";
+import axiosClient from "../../api/axiosClient";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import "./urlsignup.css";
@@ -15,10 +15,10 @@ export default function UrlSignup() {
   };
   const handleUrlSubmit = (e) => {
     e.preventDefault();
-    axios
-      .post(`http://localhost:8080/user/register`, formData)
+    axiosClient
+      .post(`/user/register`, formData)
       .then((res) => {
-        if (res.data.success == true) {
+        if (res.data.success === true) {
           setSignUpModal(res.data.message);
         } else {
           setSignUpModal(res.data.message);

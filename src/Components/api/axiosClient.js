@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const axiosClient = axios.create({
-  baseURL: "https://noteapp-backend-ribb.onrender.com", // Backed Url
+  baseURL: "http://localhost:8080", // Backed Url
 });
 
 // Adding token to every request

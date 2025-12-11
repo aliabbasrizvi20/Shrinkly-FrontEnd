@@ -1,11 +1,9 @@
-import url from "./url.png";
 import "./style.css";
-import axios from "axios";
+import axiosClient from "../api/axiosClient";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 export default function MyUrlShorten() {
   const [fullUrlText, setFullUrlText] = useState("");
-  const [UrlData, setUrlData] = useState("");
   const [userData, setUserData] = useState(null);
   const [shortUrl, setShortUrl] = useState(false);
   const [qrCodeImg, setQrCodeImage] = useState(false);
@@ -32,7 +30,7 @@ export default function MyUrlShorten() {
     setShortUrl(true);
     setQrCodeImage(true);
     setBackButton(true);
-    axios
+    axiosClient
       .post(
         "http://localhost:8080/url",
         { fullUrl: fullUrlText },
@@ -65,8 +63,8 @@ export default function MyUrlShorten() {
     if (savedUsers && token) {
       setUserData(JSON.parse(savedUsers, token));
 
-      axios
-        .get("http://localhost:8080/url", {
+      axiosClient
+        .get("/url", {
           headers: { Authorization: `Bearer ${token}` },
         })
         .then((res) => {
