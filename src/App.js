@@ -7,7 +7,7 @@ export default function MyApp() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/url" element={<MyUrlShorten />} />
+          <Route path="/" element={<MyUrlShorten />} />
           <Route path="/urlShorter/Register" element={<UrlSignup />} />
           <Route path="/urlshorter/login" element={<UrlLogin />} />
         </Routes>

@@ -21,7 +21,7 @@ export default function UrlLogin() {
           setLoginModal(res.data.message);
           localStorage.setItem("token", res.data.token);
           localStorage.setItem("user", JSON.stringify(res.data.user));
-          nav("/url");
+          nav("/");
         } else {
           setLoginModal(res.data.message);
         }
