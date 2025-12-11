@@ -32,7 +32,7 @@ export default function MyUrlShorten() {
     setBackButton(true);
     axiosClient
       .post(
-        "http://localhost:8080/url",
+        "/url",
         { fullUrl: fullUrlText },
         { headers: { Authorization: `Bearer ${token}` } }
       )
@@ -128,7 +128,7 @@ export default function MyUrlShorten() {
           {shortUrl && (
             <h4>
               Short Url:{" "}
-              <a href={`http://localhost:8080/${shortUrl}`}> {shortUrl}</a>
+              <a href={`https://shrinklly.netlify.app/${shortUrl}`}> {shortUrl}</a>
             </h4>
           )}
         </div>
@@ -151,11 +151,11 @@ export default function MyUrlShorten() {
                   <td>{urlValue.fullUrl}</td>
                   <td>
                     {userData ? (
-                      <a href={`http://localhost:8080/${urlValue.shortUrl}`}>
+                      <a href={`https://shrinklly.netlify.app/${urlValue.shortUrl}`}>
                         {urlValue.shortUrl}{" "}
                       </a>
                     ) : (
-                      <a href={`http://localhost:8080/${urlValue.shorturl}`}>
+                      <a href={`https://shrinklly.netlify.app/${urlValue.shorturl}`}>
                         {urlValue.shorturl}
                       </a>
                     )}
