@@ -1,0 +1,87 @@
+.url-login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  background-color: aliceblue;
+}
+
+.url-logging {
+  position: relative;
+  width: 100%;
+  max-width: 450px;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+}
+
+.url-logging h3 {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 30px;
+  color: #ec8905;
+}
+
+.url-logging input {
+  /* width: 100%; */
+  padding: 15px;
+  /* margin-bottom: 15px; */
+  outline-color: skyblue;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.url-logging button {
+  width: 100%;
+  padding: 12px;
+  background: #00c261;
+  border: none;
+  color: white;
+  font-size: 20px;
+  /* margin-bottom: 22px; */
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.url-logging p {
+  text-align: center;
+}
+
+.url-logging a {
+  color: darkgoldenrod;
+  font-size: 18px;
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .url-logging {
+    max-width: 90%;
+    padding: 15px;
+  }
+
+  .url-logging h3 {
+    font-size: 24px;
+  }
+}
+.modal-wrapper {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+  width: 500px;
+  background-color: palegreen;
+  border-radius: 10px;
+}
+.url-logging h6 {
+  text-align: center;
+  color: red;
+  font-size: 15px;
+  margin: 0;
+}
+.url-logging form{
+    display: flex;
+    flex-direction: column;
+}

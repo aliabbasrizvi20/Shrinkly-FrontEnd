@@ -1,0 +1,192 @@
+*{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  
+}
+.form-container{
+   width: 100%;
+  
+   background-color: #14191d;
+   padding: 60px 0px;
+  
+}
+.input-field-url{
+        max-width: 800px;
+        display: flex;
+        margin: 50px auto;
+        font-size: 30px;
+}
+.input-field-url button{
+        width: 165px;
+    border: none;
+    outline: none;
+    border-radius: 2px;
+    background: #00c261;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 15px;
+   
+
+   
+}
+.table-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 80%;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+
+   .input-field-url input{
+    width: 100%;
+    /* padding: 8px; */
+    padding: 0px 0px 0px 15px;
+    outline: none;
+    font-size: 16px;
+    margin-right: 4px;
+   }
+
+   .form-container h6{
+    margin: 0;
+    font-size: 45px;
+    text-align: center;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+
+   .originalUrl{
+    width: 100%;
+   
+   
+   }
+   .shorten{
+    text-align: center;
+    
+    
+   }
+   .text{
+    color: white;
+    text-align: center;
+    /* margin-top: 15px; */
+    margin: 15px 25px 0px 25px;
+    font-size: 24px;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 300;
+
+   }
+
+   .shorten img{
+    width: 200px;
+
+   }
+   .shorten h4{
+    text-align: center;
+    font-size: 25px;
+    color: #fff;
+   }
+   .register{
+    text-align: right;
+   }
+   .register button{
+       padding: 15px;
+    margin-top: 5px;
+    width: 85px;
+    margin-right: 5px;
+    outline: none;
+    border-radius: 30px;
+    border: 1px solid skyblue;
+    font-size: larger;
+    background: none;
+    
+    cursor: pointer;
+   }
+   .log{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   }
+   .log h5{
+        margin-right: 7px;
+    color: crimson;
+    font-size: 18px;
+   }
+   .register button:hover{
+    background-color: skyblue;
+    outline: none;
+    transition: .5s ease-in-out;
+   }
+   .navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+   }
+   .nav-bar li{
+    list-style:  none;
+   }
+   .logo{
+        font-size: 30px;
+    margin-left: 20px;
+    font-weight: 600;
+    /* color: #c8770a; */
+    color: #ec8905;
+  }
+  .shorten a{
+    color: #ec8905;
+    text-decoration: underline;
+  }
+
+
+  .modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 300px;
+  text-align: center;
+}
+
+.modal-buttons {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.btn-cancel {
+  background: #ccc;
+}
+
+.btn-confirm {
+  background: #f44336;
+  color: #fff;
+}

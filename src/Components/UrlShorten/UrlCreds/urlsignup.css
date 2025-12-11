@@ -1,0 +1,97 @@
+.Url-register-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  background: #f4f4f4;
+  background-color: aliceblue;
+  position: relative;
+}
+
+.Url-register {
+  width: 100%;
+  max-width: 500px;
+  padding: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  background: #fff;
+}
+
+.Url-register h4 {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 28px;
+  color: #ec8905;
+}
+
+.Url-register input {
+  /* width: 100%; */
+  /* margin-bottom: 15px; */
+  padding: 15px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  outline-color: skyblue;
+}
+
+.Url-register button {
+  width: 100%;
+  padding: 12px;
+  background: #00c261;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 20px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.Url-register p {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.Url-register a {
+  color: #ec8905;
+  font-size: 18px;
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .Url-register {
+    padding: 15px;
+    max-width: 90%;
+  }
+
+  .Url-register h4 {
+    font-size: 22px;
+  }
+
+  .Url-register input,
+  .Url-register button {
+    font-size: 16px;
+    padding: 10px;
+  }
+}
+
+.signup-modals {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+  width: 500px;
+  background-color: palegreen;
+  border-radius: 10px;
+}
+.Url-register h6 {
+  text-align: center;
+  color: red;
+  font-size: 15px;
+  margin: 0;
+}
+.Url-register form{
+    display: flex;
+    flex-direction: column;
+}
