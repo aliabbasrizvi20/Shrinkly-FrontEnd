@@ -37,7 +37,6 @@ export default function MyUrlShorten() {
         { headers: { Authorization: `Bearer ${token}` } }
       )
       .then((res) => {
-        console.log(res.data);
         const newUrl = {
           fullUrl: fullUrlText,
           shorturl: res.data.url.shortUrl,
@@ -68,7 +67,6 @@ export default function MyUrlShorten() {
           headers: { Authorization: `Bearer ${token}` },
         })
         .then((res) => {
-          console.log("get data", res.data.urls);
           setUrlList(res.data.urls);
           setShowUrlTable(true);
         })
