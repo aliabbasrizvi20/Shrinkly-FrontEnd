@@ -1,0 +1,5 @@
+[[redirects]]
+  from = "/*"
+  to = "https://shrinkly-backend.onrender.com/:splat"
+  status = 302
+  force = true
