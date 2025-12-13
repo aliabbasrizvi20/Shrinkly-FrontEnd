@@ -1,15 +1,18 @@
 import axiosClient from "../../api/axiosClient";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import "./urlsignup.css";
 
 export default function UrlSignup() {
+  
+  const nav=useNavigate();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     password: "",
   });
-  const [signUpModal, setSignUpModal] = useState(false);
+  const [signUpModal, setSignUpModal] = useState("");
+  const [isSignUpSuccess, setSignUpSuccess]=useState(false)
   const onHandleUrlChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
@@ -20,6 +23,10 @@ export default function UrlSignup() {
       .then((res) => {
         if (res.data.success === true) {
           setSignUpModal(res.data.message);
+          setSignUpSuccess(true)
+          setTimeout(()=>{
+            nav('/urlshorter/login')
+          },1000)
         } else {
           setSignUpModal(res.data.message);
         }
@@ -67,7 +74,7 @@ export default function UrlSignup() {
           <p>
             Already Registered? <Link to="/urlShorter/login">Login</Link>{" "}
           </p>
-          <h6>{signUpModal}</h6>
+          <h6 style={{color: isSignUpSuccess?"green" :"red"}}>{signUpModal}</h6>
         </div>
       </div>
     </>

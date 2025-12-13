@@ -1,7 +1,8 @@
 import axios from "axios";
 
 const axiosClient = axios.create({
-  baseURL: "https://shrinkly-backend.onrender.com", // Backed Url
+  baseURL: "https://shrinkly-backend.onrender.com",
+  // baseURL:"http://localhost:3000" // Backed Url
 });
 
 // Adding token to every request

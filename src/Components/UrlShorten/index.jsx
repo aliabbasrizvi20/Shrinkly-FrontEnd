@@ -1,3 +1,4 @@
+import { backendUrl } from "../../common/constant";
 import "./style.css";
 import axiosClient from "../api/axiosClient";
 import { useEffect, useState } from "react";
@@ -7,7 +8,6 @@ export default function MyUrlShorten() {
   const [userData, setUserData] = useState(null);
   const [shortUrl, setShortUrl] = useState(false);
   const [qrCodeImg, setQrCodeImage] = useState(false);
-  const [backButton, setBackButton] = useState(false);
   const [showUrlTable, setShowUrlTable] = useState(false);
   const [urlList, setUrlList] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -29,7 +29,6 @@ export default function MyUrlShorten() {
     const token = localStorage.getItem("token");
     setShortUrl(true);
     setQrCodeImage(true);
-    setBackButton(true);
     axiosClient
       .post(
         "/url",
@@ -126,7 +125,7 @@ export default function MyUrlShorten() {
           {shortUrl && (
             <h4>
               Short Url:{" "}
-              <a href={`https://shrinklly.netlify.app/${shortUrl}`}> {shortUrl}</a>
+              <a href={`${backendUrl}/${shortUrl}`}> {shortUrl}</a>
             </h4>
           )}
         </div>
@@ -149,11 +148,11 @@ export default function MyUrlShorten() {
                   <td>{urlValue.fullUrl}</td>
                   <td>
                     {userData ? (
-                      <a href={`https://shrinklly.netlify.app/${urlValue.shortUrl}`}>
+                      <a href={`${backendUrl}/${urlValue.shortUrl}`}>
                         {urlValue.shortUrl}{" "}
                       </a>
                     ) : (
-                      <a href={`https://shrinklly.netlify.app/${urlValue.shorturl}`}>
+                      <a href={`${backendUrl}/${urlValue.shorturl}`}>
                         {urlValue.shorturl}
                       </a>
                     )}

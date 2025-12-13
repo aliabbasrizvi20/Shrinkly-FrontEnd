@@ -6,7 +6,8 @@ import { Link, useNavigate } from "react-router-dom";
 export default function UrlLogin() {
   const [loginEmail, setLoginEmail] = useState("");
   const [loginPassword, setLoginPassword] = useState("");
-  const [loginModal, setLoginModal] = useState(false);
+  const [loginModal, setLoginModal] = useState("");
+  const [isLogInSuccess, setIsLogInSuccess]=useState(false)
   const nav = useNavigate();
 
   const handleUrlLoginSubmit = (e) => {
@@ -19,9 +20,12 @@ export default function UrlLogin() {
       .then((res) => {
         if (res.data.success === true) {
           setLoginModal(res.data.message);
+          setIsLogInSuccess(true)
           localStorage.setItem("token", res.data.token);
           localStorage.setItem("user", JSON.stringify(res.data.user));
-          nav("/");
+          setTimeout(()=>{
+            nav("/");
+          },1000)
         } else {
           setLoginModal(res.data.message);
         }
@@ -66,7 +70,7 @@ export default function UrlLogin() {
             Haven't created an account?{" "}
             <Link to="/urlShorter/register">Register Now</Link>{" "}
           </p>
-          <h6>{loginModal}</h6>
+          <h6 style={{color: isLogInSuccess?"green" :"red"}}>{loginModal}</h6>
         </div>
       </div>
     </>
